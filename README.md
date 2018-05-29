@@ -1,5 +1,7 @@
 # TipGuide
 
+AD 340 - Android Development, Group Project
+
 [![codecov](https://codecov.io/gh/bigTimeBrad/TipGuide/branch/master/graph/badge.svg)](https://codecov.io/gh/bigTimeBrad/TipGuide)
 
 
