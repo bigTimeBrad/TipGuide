@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">TipGuide</string>
+    <string name="app_name">Tipping Guide</string>
+    <string name="action_settings">Settings</string>
 </resources>
