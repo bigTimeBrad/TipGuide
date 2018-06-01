@@ -6,4 +6,8 @@
     <color name="white">#FFFFFF</color>
     <color name="dark_grey">#424242</color>
     <color name="medium_grey">#9E9E9E</color>
+    <color name="textColor">#000000</color>
+    <color name="calcButton">#00e2e2</color>
+    <color name="calTextView">#bbffff</color>
+    <!--<color name="icons">#009494</color>-->
 </resources>

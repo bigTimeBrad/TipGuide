@@ -36,6 +36,12 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
 
+        <Spinner
+            android:id="@+id/countryMenu"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:padding="25dp" />
+
     </android.support.design.widget.CoordinatorLayout>
 
 </android.support.v4.widget.DrawerLayout>
