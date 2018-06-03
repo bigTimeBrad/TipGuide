@@ -4,60 +4,65 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:paddingTop="110dp"
-    android:paddingStart="5dp"
-    android:paddingEnd="5dp"
     tools:context=".ConverterFragment">
+
+    <ImageView
+        android:id="@+id/currency_converter_pic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="Currency conversion picture"
+        android:src="@drawable/currency" />
+    
     <TextView
         android:id="@+id/textView1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/one"
+        android:paddingStart="@dimen/converter_padding_dimens"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <Spinner
         android:id="@+id/spinner1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="10dp" />
+        android:padding="@dimen/converter_padding_dimens" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/in"
+        android:paddingStart="@dimen/converter_padding_dimens"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <Spinner
         android:id="@+id/spinner2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="10dp" />
+        android:padding="@dimen/converter_padding_dimens" />
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/equal"
+        android:paddingStart="@dimen/converter_padding_dimens"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <TextView
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/md_keylines"
+        android:layout_gravity="center"
+        android:textSize="18sp"
         android:text="@string/result" />
 
     <Button
         android:id="@+id/button1"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="@dimen/converter_padding_dimens"
         android:text="@string/calculate" />
 
-    <TextView
-        android:id="@+id/tv1"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="@string/powered" />
 </LinearLayout>
