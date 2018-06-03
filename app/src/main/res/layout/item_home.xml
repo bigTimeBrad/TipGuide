@@ -9,4 +9,23 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Home" />
+
+    <TextView
+        android:id="@+id/country"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Home" />
+
+    <Spinner
+        android:id="@+id/spinner_country"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/country_padding_dimens" />
+
+    <Button
+        android:id="@+id/button_country"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/country_padding_dimens"
+        android:text="@string/calculate" />
 </LinearLayout>
