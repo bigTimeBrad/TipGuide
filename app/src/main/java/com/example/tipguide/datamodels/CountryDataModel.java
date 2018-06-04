@@ -14,6 +14,7 @@ import java.util.HashMap;
 import java.util.function.Consumer;
 
 public class CountryDataModel {
+
     private DatabaseReference mDatabase;
     private HashMap<DatabaseReference, ValueEventListener> listeners;
 
@@ -42,10 +43,11 @@ public class CountryDataModel {
     }
 
     //updates person by id
-    public void updateMatchesItemById(CountryModel matches) {
+    public void updateCountryItemById(CountryModel country) {
         DatabaseReference matchesItemsRef = mDatabase.child("countries");
-        matchesItemsRef.child(matches.uid).setValue(matches);
+        matchesItemsRef.child(country.uid).setValue(country);
     }
+
     public void clear() {
         // Clear all the listeners onPause
         listeners.forEach(Query::removeEventListener);

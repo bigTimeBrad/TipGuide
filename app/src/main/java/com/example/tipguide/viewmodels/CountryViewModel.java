@@ -10,15 +10,14 @@ import com.example.tipguide.model.CountryModel;
 import com.google.firebase.database.DataSnapshot;
 
 public class CountryViewModel {
+
     private CountryDataModel datamodel;
 
     public CountryViewModel() {
-
         datamodel = new CountryDataModel();
     }
 
     public void getDataFromViewModel(Consumer<ArrayList<CountryModel>> resultCallback) {
-
         datamodel.getDataFromDataModel(
                 (DataSnapshot dataSnapshot) -> {
                     ArrayList<CountryModel> arrayOfusers= new ArrayList<>();
@@ -36,7 +35,7 @@ public class CountryViewModel {
     }
     //updates the item in the database
     public void updateCountryListItems(CountryModel country) {
-        datamodel.updateMatchesItemById(country);
+        datamodel.updateCountryItemById(country);
     }
     public void clear() {
         datamodel.clear();

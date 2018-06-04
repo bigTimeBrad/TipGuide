@@ -15,8 +15,7 @@ import com.example.tipguide.model.CountryModel;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CountryRecyclerViewAdapter extends RecyclerView.Adapter<CountryRecyclerViewAdapter.ViewHolder>
-{
+public class CountryRecyclerViewAdapter extends RecyclerView.Adapter<CountryRecyclerViewAdapter.ViewHolder> {
     private List<CountryModel> country;
     private final HomeFragment.OnListFragmentInteractionListener mListener;
 
@@ -27,7 +26,6 @@ public class CountryRecyclerViewAdapter extends RecyclerView.Adapter<CountryRecy
         this.mListener = listener;
 
     }
-
 
     @NonNull
     @Override
@@ -46,10 +44,10 @@ public class CountryRecyclerViewAdapter extends RecyclerView.Adapter<CountryRecy
 
     }
 
-   @Override
+    @Override
     public int getItemCount() {
 
-        if(country != null) {
+        if (country != null) {
             return country.size();
         } else {
             Log.i(TAG, "getItemCount() equals zero");
@@ -70,16 +68,5 @@ public class CountryRecyclerViewAdapter extends RecyclerView.Adapter<CountryRecy
             name = (TextView) view.findViewById(R.id.country);
         }
     }
-
-    public void updateCountryListItems(List<CountryModel> country) {
-        if (country == null) {
-            country = new ArrayList<>();
-        }
-        final CountryDiffCallback diffCallback = new CountryDiffCallback(this.country, country);
-        final DiffUtil.DiffResult diffResult = DiffUtil.calculateDiff(diffCallback);
-
-        this.country.clear();
-        this.country.addAll(country);
-        diffResult.dispatchUpdatesTo(this);
-    }
 }
+

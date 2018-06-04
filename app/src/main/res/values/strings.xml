@@ -25,6 +25,22 @@
         <item >Australian Dollar</item>
         <item >Singapore Dollar</item>
     </string-array>
+    <string-array name="name2">
+        <item >Morocco</item>
+        <item >Israel</item>
+        <item >Costa Rica</item>
+        <item >India</item>
+        <item >Greece</item>
+        <item >Brazil</item>
+        <item >Canada</item>
+        <item >Mexico</item>
+        <item >Australia</item>
+        <item >Malaysia</item>
+        <item >France</item>
+        <item >Egypt</item>
+        <item >South Africa</item>
+        <item >Italy</item>
+    </string-array>
     <string-array name="value">
         <item >INR</item>
         <item >USD</item>

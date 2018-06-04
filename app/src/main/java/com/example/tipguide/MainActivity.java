@@ -11,10 +11,15 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.example.tipguide.model.CountryModel;
+import com.example.tipguide.viewmodels.CountryViewModel;
+
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements HomeFragment.OnListFragmentInteractionListener {
+
+    private CountryViewModel viewModel;
     //This is a test
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -86,5 +91,9 @@ public class MainActivity extends AppCompatActivity {
             return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+    @Override
+    public void onListFragmentInteraction(CountryModel item) {
+        viewModel.updateCountryListItems(item);
     }
 }
