@@ -10,31 +10,45 @@
     <string name="tip_per_person">Tip Amount Per Person</string>
     <string name="calculate_tip">Calculate Tip</string>
 
+
     <string name="one">One</string>
-    <string name="in">in</string>
-    <string name="equal">is equal to:</string>
-    <string name="result">Click To See Conversion</string>
-    <string name="calculate">CONVERT</string>
+    <string name="in">In</string>
+    <string name="equal">Is Equal To</string>
+    <string name="result">Click Calculate for Result</string>
+    <string name="calculate">Calculate</string>
+    <string name="powered">Powered By Yahoo! Finance</string>
     <string-array name="name">
+        <item >Indian Rupee</item>
         <item >US Dollar</item>
         <item >European Union Euro</item>
         <item >Canadian Dollar</item>
         <item >Australian Dollar</item>
         <item >Singapore Dollar</item>
-        <item >Indian Rupee</item>
-        <item >Israeli Shekel</item>
-        <item >Brazilian Real</item>
-
+    </string-array>
+    <string-array name="name2">
+        <item >Morocco</item>
+        <item >Israel</item>
+        <item >Costa Rica</item>
+        <item >India</item>
+        <item >Greece</item>
+        <item >Brazil</item>
+        <item >Canada</item>
+        <item >Mexico</item>
+        <item >Australia</item>
+        <item >Malaysia</item>
+        <item >France</item>
+        <item >Egypt</item>
+        <item >South Africa</item>
+        <item >Italy</item>
     </string-array>
     <string-array name="value">
+        <item >INR</item>
         <item >USD</item>
         <item >EUR</item>
         <item >CAD</item>
         <item >AUD</item>
         <item >SGD</item>
-        <item >INR</item>
-        <item >ILS</item>
-        <item >BRL</item>
-
     </string-array>
+
+
 </resources>

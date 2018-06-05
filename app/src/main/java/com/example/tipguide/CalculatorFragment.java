@@ -42,7 +42,7 @@ public class CalculatorFragment extends Fragment {
         totalBillAmount = view.findViewById(R.id.bill_value);
         tipPercent = view.findViewById(R.id.seekBar);
         tipsNumberOfPeople = view.findViewById(R.id.seekBar_one);
-        cardText = view.findViewById(R.id.card_text);
+        //cardText = view.findViewById(R.id.card_text);
         totalAmountToBePaid = view.findViewById(R.id.total_to_pay_result);
         totalAmountOfTipsToBePaid = view.findViewById(R.id.total_tip_result);
         tipsPerPerson = view.findViewById(R.id.tip_per_person_result);
