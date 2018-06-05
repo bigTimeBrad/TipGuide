@@ -77,7 +77,8 @@ public class MainActivityTest {
         onView(withId(R.id.viewpager)).perform(swipeLeft());
 
         onView(withId(R.id.spinnerIn)).perform(doubleClick());
-//        onData(anything()).atPosition(1).perform(click());
+
+        onData(anything()).atPosition(1).perform(click());
 
 //        onData(hasToString(startsWith("US Doll")))
 //                .perform(click());
@@ -86,9 +87,7 @@ public class MainActivityTest {
 //        onView(withText("US Dollar")).perform(click());
 
 //        Espresso.closeSoftKeyboard();
-//        onView(withId(R.id.buttonConverter)).perform(click());
-
-
+        onView(withId(R.id.buttonConverter)).perform(click());
 
     }
 
