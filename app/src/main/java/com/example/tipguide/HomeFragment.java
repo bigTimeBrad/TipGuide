@@ -89,7 +89,7 @@ public class HomeFragment extends Fragment {
         textView3 = rootView.findViewById(R.id.textView3);
         textView4 = rootView.findViewById(R.id.textView4);
         Spinner s1 = rootView.findViewById(R.id.spinner1);
-        Spinner s2 = rootView.findViewById(R.id.spinner2);
+        //Spinner s2 = rootView.findViewById(R.id.spinner2);
         Button updateCountryButton = rootView.findViewById(R.id.update);
         ArrayAdapter<CharSequence> arrayAdapter = ArrayAdapter.createFromResource(
                 Objects.requireNonNull(this.getActivity()), R.array.name2, android.R.layout.simple_spinner_item);

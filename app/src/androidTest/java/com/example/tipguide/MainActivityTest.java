@@ -1,14 +1,21 @@
 package com.example.tipguide;
 
+import org.hamcrest.Matcher;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+
+import android.support.test.espresso.UiController;
+import android.support.test.espresso.ViewAction;
+import android.support.test.espresso.matcher.ViewMatchers;
 import android.support.test.runner.AndroidJUnit4;
 
 import static android.support.test.espresso.Espresso.onData;
 import static android.support.test.espresso.Espresso.onView;
 import static android.support.test.espresso.action.ViewActions.click;
+import static android.support.test.espresso.action.ViewActions.scrollTo;
 import static android.support.test.espresso.action.ViewActions.swipeLeft;
+import static android.support.test.espresso.action.ViewActions.typeText;
 import static android.support.test.espresso.assertion.ViewAssertions.matches;
 import static android.support.test.espresso.matcher.ViewMatchers.withId;
 import static android.support.test.espresso.matcher.ViewMatchers.withText;
@@ -17,7 +24,8 @@ import static org.hamcrest.Matchers.hasToString;
 import static org.hamcrest.Matchers.startsWith;
 
 import android.support.test.rule.ActivityTestRule;
-
+import android.view.View;
+import android.widget.SeekBar;
 
 
 @RunWith(AndroidJUnit4.class)
@@ -50,8 +58,56 @@ public class MainActivityTest {
 
         onView(withId(R.id.update))
                 .perform(click());
-        
+
     }
+
+//    @Test
+//    public void converterPage(){
+//
+//        onView(withId(R.id.viewpager)).perform(swipeLeft());
+//
+//        onView(withId(R.id.spinnerIn)).perform(click());
+//
+//        onData(hasToString(startsWith("US Dollar")))
+//                .perform(click());
+//
+//        onView(withId(R.id.spinnerOut)).perform(click());
+//
+//        onData(hasToString(startsWith("Euro")))
+//                .perform(click());
+//
+//        onView(withText("calculate")).perform(click());
+//
+//    }
+
+
+
+    @Test
+    public void calculatorTest(){
+        onView(withId(R.id.viewpager)).perform(swipeLeft());
+        onView(withId(R.id.viewpager)).perform(swipeLeft());
+
+        //totalBill
+        onView(withId(R.id.bill_value)).perform(typeText("100"));
+
+        //tip percent
+        onView(withId(R.id.seekBar)).perform(click());
+
+        //split
+        onView(withId(R.id.seekBar_one)).perform(click());
+
+        onView(withId(R.id.calculate_tips)).perform(click());
+
+        onView(withId(R.id.total_to_pay_result)).check(matches(withText("150")));
+
+        onView(withId(R.id.total_tip_result)).check(matches(withText("50")));
+
+        onView(withId(R.id.tip_per_person_result)).check(matches(withText("10")));
+
+
+    }
+
+
 
 
 }

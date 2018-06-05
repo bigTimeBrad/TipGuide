@@ -40,8 +40,8 @@ public class ConverterFragment extends Fragment {
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.item_converter, container, false);
         conversionTextView = rootView.findViewById(R.id.textView4);
-        Spinner s1 = rootView.findViewById(R.id.spinner1);
-        Spinner s2 = rootView.findViewById(R.id.spinner2);
+        Spinner s1 = rootView.findViewById(R.id.spinnerIn);
+        Spinner s2 = rootView.findViewById(R.id.spinnerOut);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(
                 Objects.requireNonNull(this.getActivity()), R.array.name, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.select_dialog_singlechoice);

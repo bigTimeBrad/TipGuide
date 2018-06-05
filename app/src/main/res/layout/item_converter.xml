@@ -22,7 +22,7 @@
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <Spinner
-        android:id="@+id/spinner1"
+        android:id="@+id/spinnerIn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="@dimen/converter_padding_dimens" />
@@ -36,7 +36,7 @@
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <Spinner
-        android:id="@+id/spinner2"
+        android:id="@+id/spinnerOut"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="@dimen/converter_padding_dimens" />
