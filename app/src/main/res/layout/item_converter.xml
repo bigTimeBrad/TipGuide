@@ -59,7 +59,7 @@
         android:text="@string/result" />
 
     <Button
-        android:id="@+id/button1"
+        android:id="@+id/buttonConverter"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/converter_padding_dimens"

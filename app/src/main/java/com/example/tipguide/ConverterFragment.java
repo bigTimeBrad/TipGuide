@@ -50,7 +50,7 @@ public class ConverterFragment extends Fragment {
         s2.setAdapter(adapter);
         s1.setOnItemSelectedListener(new spinOne(1));
         s2.setOnItemSelectedListener(new spinOne(2));
-        Button b = rootView.findViewById(R.id.button1);
+        Button b = rootView.findViewById(R.id.buttonConverter);
         b.setOnClickListener(new View.OnClickListener() {
             public void onClick(View View) {
                 if (from == to) {

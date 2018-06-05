@@ -75,15 +75,20 @@ public class MainActivityTest {
         onView(withId(R.id.viewpager)).perform(swipeLeft());
 
         onView(withId(R.id.spinnerIn)).perform(doubleClick());
+        onData(hasToString(startsWith("US Doll")))
+                .perform(click());
+
+//        onView(withId(R.id.spinnerOut)).perform(doubleClick());
+//        onData(hasToString(startsWith("India")))
+//                .perform(click());
+
+
+        onView(withId(R.id.buttonConverter)).perform(click());
+
+
     }
 
-    @Test
-    public void converterPage2(){
 
-        onView(withId(R.id.viewpager)).perform(swipeLeft());
-
-        onView(withId(R.id.spinnerOut)).perform(doubleClick());
-    }
 
     @Test
     public void calculatorToastTest(){
