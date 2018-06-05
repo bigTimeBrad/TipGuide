@@ -12,17 +12,23 @@ import android.support.test.espresso.action.ViewActions;
 import android.support.test.espresso.matcher.ViewMatchers;
 import android.support.test.runner.AndroidJUnit4;
 
+import static android.app.PendingIntent.getActivity;
 import static android.support.test.espresso.Espresso.onData;
 import static android.support.test.espresso.Espresso.onView;
 import static android.support.test.espresso.action.ViewActions.click;
+import static android.support.test.espresso.action.ViewActions.doubleClick;
 import static android.support.test.espresso.action.ViewActions.scrollTo;
 import static android.support.test.espresso.action.ViewActions.swipeLeft;
 import static android.support.test.espresso.action.ViewActions.typeText;
 import static android.support.test.espresso.assertion.ViewAssertions.matches;
+import static android.support.test.espresso.matcher.RootMatchers.withDecorView;
+import static android.support.test.espresso.matcher.ViewMatchers.isDisplayed;
 import static android.support.test.espresso.matcher.ViewMatchers.withId;
 import static android.support.test.espresso.matcher.ViewMatchers.withText;
 import static org.hamcrest.Matchers.containsString;
 import static org.hamcrest.Matchers.hasToString;
+import static org.hamcrest.Matchers.is;
+import static org.hamcrest.Matchers.not;
 import static org.hamcrest.Matchers.startsWith;
 
 import android.support.test.rule.ActivityTestRule;
@@ -63,24 +69,21 @@ public class MainActivityTest {
 
     }
 
-//    @Test
-//    public void converterPage(){
-//
-//        onView(withId(R.id.viewpager)).perform(swipeLeft());
-//
-//        onView(withId(R.id.spinnerIn)).perform(click());
-//
-//        onData(hasToString(startsWith("US Dollar")))
-//                .perform(click());
-//
-//        onView(withId(R.id.spinnerOut)).perform(click());
-//
-//        onData(hasToString(startsWith("Euro")))
-//                .perform(click());
-//
-//        onView(withText("calculate")).perform(click());
-//
-//    }
+    @Test
+    public void converterPage(){
+
+        onView(withId(R.id.viewpager)).perform(swipeLeft());
+
+        onView(withId(R.id.spinnerIn)).perform(doubleClick());
+    }
+
+    @Test
+    public void converterPage2(){
+
+        onView(withId(R.id.viewpager)).perform(swipeLeft());
+
+        onView(withId(R.id.spinnerOut)).perform(doubleClick());
+    }
 
     @Test
     public void calculatorToastTest(){
@@ -91,8 +94,10 @@ public class MainActivityTest {
         Espresso.closeSoftKeyboard();
 
         onView(withId(R.id.calculate_tips)).perform(click());
-    }
 
+        onView(withText("Set values for Tip percent and split number")).inRoot(withDecorView(not(is(mActivityRule.getActivity().getWindow().getDecorView())))).check(matches(isDisplayed()));
+
+    }
 
     @Test
     public void calculatorTest(){
