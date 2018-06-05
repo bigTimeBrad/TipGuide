@@ -17,6 +17,7 @@ import static android.support.test.espresso.Espresso.onData;
 import static android.support.test.espresso.Espresso.onView;
 import static android.support.test.espresso.action.ViewActions.click;
 import static android.support.test.espresso.action.ViewActions.doubleClick;
+import static android.support.test.espresso.action.ViewActions.longClick;
 import static android.support.test.espresso.action.ViewActions.scrollTo;
 import static android.support.test.espresso.action.ViewActions.swipeLeft;
 import static android.support.test.espresso.action.ViewActions.typeText;
@@ -76,7 +77,7 @@ public class MainActivityTest {
         onView(withId(R.id.viewpager)).perform(swipeLeft());
 
         onView(withId(R.id.spinnerIn)).perform(doubleClick());
-        onData(anything()).atPosition(3).perform(click());
+//        onData(anything()).atPosition(1).perform(click());
 
 //        onData(hasToString(startsWith("US Doll")))
 //                .perform(click());
@@ -84,8 +85,8 @@ public class MainActivityTest {
 //        onView(withId(R.id.spinnerOut)).perform(doubleClick());
 //        onView(withText("US Dollar")).perform(click());
 
-        Espresso.closeSoftKeyboard();
-        onView(withId(R.id.buttonConverter)).perform(click());
+//        Espresso.closeSoftKeyboard();
+//        onView(withId(R.id.buttonConverter)).perform(click());
 
 
 
@@ -93,6 +94,7 @@ public class MainActivityTest {
 
 
 
+//    WORKS
     @Test
     public void calculatorToastTest(){
         onView(withId(R.id.viewpager)).perform(swipeLeft());
@@ -101,8 +103,9 @@ public class MainActivityTest {
         onView(withId(R.id.bill_value)).perform(typeText("100"));
         Espresso.closeSoftKeyboard();
 
-        onView(withText("Set values for Tip percent and split number")).inRoot(withDecorView(not(is(mActivityRule.getActivity().getWindow().getDecorView())))).check(matches(isDisplayed()));
         onView(withId(R.id.calculate_tips)).perform(click());
+        onView(withText("Set values for Tip percent and split number")).inRoot(withDecorView(not(is(mActivityRule.getActivity().getWindow().getDecorView())))).check(matches(isDisplayed()));
+
 
     }
 
