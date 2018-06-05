@@ -11,128 +11,141 @@
 android:layout_width="match_parent"
 android:layout_height="match_parent"
 >
-<ScrollView
-    android:id="@+id/scroll_content"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
 
-    android:layout_above="@+id/calculate_tips"
-    android:layout_marginBottom="6dp"
-    android:background="#ffffff"
-    android:padding="16dp"
-    android:scrollbars="none">
-    <RelativeLayout
+    <ScrollView
+        android:id="@+id/scroll_content"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="538dp"
+
+        android:layout_above="@+id/calculate_tips"
+        android:layout_marginBottom="80dp"
+        android:background="#ffffff"
+        android:padding="16dp"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
 
-        <TextView
-            android:id="@+id/first_binary"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            <TextView
+                android:id="@+id/first_binary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
 
-            android:layout_alignParentTop="true"
-            android:layout_marginTop="8dp"
-            android:text="@string/total_bill"
-            android:textStyle="bold"
-            android:textColor="@color/textColor" />
-        <EditText
-            android:id="@+id/bill_value"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/first_binary"
-            android:layout_marginTop="4dp"
-            android:lines="3"
-            android:inputType="numberDecimal"
-            android:background="@color/calTextView"
-            android:padding="8dp" />
-        <TextView
-            android:id="@+id/tip_percent"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:layout_below="@+id/bill_value"
-            android:text="@string/tip_percent"
-            android:textStyle="bold"
-            android:textColor="@color/textColor" />
-        <SeekBar
-            android:id="@+id/seekBar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:layout_below="@+id/tip_percent"/>
-        <TextView
-            android:id="@+id/split_number"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:layout_below="@+id/seekBar"
-            android:text="@string/split_number"
-            android:textStyle="bold"
-            android:textColor="@color/textColor" />
-        <SeekBar
-            android:id="@+id/seekBar_one"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:max="10"
-            android:layout_below="@+id/split_number"/>
-        <TextView
-            android:id="@+id/total_to_pay"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:layout_below="@+id/seekBar_one"
-            android:text="@string/total_amount_to_pay"
-            android:textStyle="bold"
-            android:textColor="@color/textColor" />
-        <TextView
-            android:id="@+id/total_to_pay_result"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:layout_below="@+id/total_to_pay"
-            android:textStyle="bold"
-            android:background="@color/calTextView"
-            android:textColor="@color/textColor" />
-        <TextView
-            android:id="@+id/total_tip"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:layout_below="@+id/total_to_pay_result"
-            android:text="@string/total_tip"
-            android:textStyle="bold"
-            android:textColor="@color/textColor" />
-        <TextView
-            android:id="@+id/total_tip_result"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:layout_below="@+id/total_tip"
-            android:textStyle="bold"
-            android:background="@color/calTextView"
-            android:textColor="@color/textColor" />
-        <TextView
-            android:id="@+id/tip_per_person"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:layout_below="@+id/total_tip_result"
-            android:text="@string/tip_per_person"
-            android:textStyle="bold"
-            android:textColor="@color/textColor" />
-        <TextView
-            android:id="@+id/tip_per_person_result"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:layout_below="@+id/tip_per_person"
-            android:textStyle="bold"
-            android:background="@color/calTextView"
-            android:textColor="@color/textColor" />
-    </RelativeLayout>
-</ScrollView>
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="8dp"
+                android:text="@string/total_bill"
+                android:textColor="@color/textColor"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/bill_value"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/first_binary"
+                android:layout_marginTop="4dp"
+                android:background="@color/calTextView"
+                android:inputType="numberDecimal"
+                android:lines="3"
+                android:padding="8dp" />
+
+            <TextView
+                android:id="@+id/tip_percent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/bill_value"
+                android:layout_marginTop="24dp"
+                android:text="@string/tip_percent"
+                android:textColor="@color/textColor"
+                android:textStyle="bold" />
+
+            <SeekBar
+                android:id="@+id/seekBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tip_percent"
+                android:layout_marginTop="4dp" />
+
+            <TextView
+                android:id="@+id/split_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/seekBar"
+                android:layout_marginTop="24dp"
+                android:text="@string/split_number"
+                android:textColor="@color/textColor"
+                android:textStyle="bold" />
+
+            <SeekBar
+                android:id="@+id/seekBar_one"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/split_number"
+                android:layout_marginTop="4dp"
+                android:max="10" />
+
+            <TextView
+                android:id="@+id/total_to_pay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/seekBar_one"
+                android:layout_marginTop="24dp"
+                android:text="@string/total_amount_to_pay"
+                android:textColor="@color/textColor"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/total_to_pay_result"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/total_to_pay"
+                android:layout_marginTop="4dp"
+                android:background="@color/calTextView"
+                android:textColor="@color/textColor"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/total_tip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/total_to_pay_result"
+                android:layout_marginTop="24dp"
+                android:text="@string/total_tip"
+                android:textColor="@color/textColor"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/total_tip_result"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/total_tip"
+                android:layout_marginTop="4dp"
+                android:background="@color/calTextView"
+                android:textColor="@color/textColor"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tip_per_person"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/total_tip_result"
+                android:layout_marginTop="24dp"
+                android:text="@string/tip_per_person"
+                android:textColor="@color/textColor"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tip_per_person_result"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tip_per_person"
+                android:layout_marginTop="4dp"
+                android:background="@color/calTextView"
+                android:textColor="@color/textColor"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </ScrollView>
 <Button
     android:id="@+id/calculate_tips"
     android:layout_width="match_parent"
