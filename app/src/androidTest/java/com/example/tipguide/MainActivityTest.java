@@ -82,6 +82,16 @@ public class MainActivityTest {
 //
 //    }
 
+    @Test
+    public void calculatorToastTest(){
+        onView(withId(R.id.viewpager)).perform(swipeLeft());
+        onView(withId(R.id.viewpager)).perform(swipeLeft());
+
+        onView(withId(R.id.bill_value)).perform(typeText("100"));
+        Espresso.closeSoftKeyboard();
+
+        onView(withId(R.id.calculate_tips)).perform(click());
+    }
 
 
     @Test
@@ -90,9 +100,9 @@ public class MainActivityTest {
         onView(withId(R.id.viewpager)).perform(swipeLeft());
 
         //totalBill
-        onView(withId(R.id.bill_value)).perform(typeText("100"));
+        onView(withId(R.id.bill_value)).perform(typeText("100.00"));
 
-        //tip percent
+        //tip percentonView(withId(R.id.calculate_tips)).perform(click());
         onView(withId(R.id.seekBar)).perform(setProgress(20));
         Espresso.closeSoftKeyboard();
 
@@ -100,17 +110,13 @@ public class MainActivityTest {
         onView(withId(R.id.seekBar_one)).perform(setProgress(1));
         Espresso.closeSoftKeyboard();
 
-
+        //Click Button and check the values
         onView(withId(R.id.calculate_tips)).perform(click());
-
         onView(withId(R.id.total_to_pay_result)).check(matches(withText("120")));
-
         onView(withId(R.id.total_tip_result)).check(matches(withText("20")));
-
         onView(withId(R.id.tip_per_person_result)).check(matches(withText("20")));
-
-
     }
+
     public static ViewAction setProgress(int progress) {
         return new ViewAction() {
             @Override

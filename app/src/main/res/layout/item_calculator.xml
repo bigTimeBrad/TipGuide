@@ -145,6 +145,5 @@ android:layout_height="match_parent">
     android:background="@color/calcButton"
     android:padding="12dp"
     android:layout_centerHorizontal="true"
-    android:layout_marginBottom="8dp"
     android:layout_alignParentBottom="true"/>
 </RelativeLayout>
