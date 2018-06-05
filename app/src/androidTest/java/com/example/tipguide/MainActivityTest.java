@@ -25,6 +25,7 @@ import static android.support.test.espresso.matcher.RootMatchers.withDecorView;
 import static android.support.test.espresso.matcher.ViewMatchers.isDisplayed;
 import static android.support.test.espresso.matcher.ViewMatchers.withId;
 import static android.support.test.espresso.matcher.ViewMatchers.withText;
+import static org.hamcrest.Matchers.anything;
 import static org.hamcrest.Matchers.containsString;
 import static org.hamcrest.Matchers.hasToString;
 import static org.hamcrest.Matchers.is;
@@ -75,7 +76,7 @@ public class MainActivityTest {
         onView(withId(R.id.viewpager)).perform(swipeLeft());
 
         onView(withId(R.id.spinnerIn)).perform(doubleClick());
-        onView(withText("US Dollar")).perform(click());
+        onData(anything()).atPosition(3).perform(click());
 
 //        onData(hasToString(startsWith("US Doll")))
 //                .perform(click());
@@ -83,8 +84,9 @@ public class MainActivityTest {
 //        onView(withId(R.id.spinnerOut)).perform(doubleClick());
 //        onView(withText("US Dollar")).perform(click());
 
+        Espresso.closeSoftKeyboard();
         onView(withId(R.id.buttonConverter)).perform(click());
-        
+
 
 
     }
@@ -99,9 +101,8 @@ public class MainActivityTest {
         onView(withId(R.id.bill_value)).perform(typeText("100"));
         Espresso.closeSoftKeyboard();
 
-        onView(withId(R.id.calculate_tips)).perform(click());
-
         onView(withText("Set values for Tip percent and split number")).inRoot(withDecorView(not(is(mActivityRule.getActivity().getWindow().getDecorView())))).check(matches(isDisplayed()));
+        onView(withId(R.id.calculate_tips)).perform(click());
 
     }
 
