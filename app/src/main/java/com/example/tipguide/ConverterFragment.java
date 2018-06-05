@@ -39,7 +39,7 @@ public class ConverterFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.item_converter, container, false);
-        conversionTextView = rootView.findViewById(R.id.textView4);
+        conversionTextView = rootView.findViewById(R.id.textViewResult);
         Spinner s1 = rootView.findViewById(R.id.spinnerIn);
         Spinner s2 = rootView.findViewById(R.id.spinnerOut);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(
@@ -50,7 +50,7 @@ public class ConverterFragment extends Fragment {
         s2.setAdapter(adapter);
         s1.setOnItemSelectedListener(new spinOne(1));
         s2.setOnItemSelectedListener(new spinOne(2));
-        Button b = rootView.findViewById(R.id.button1);
+        Button b = rootView.findViewById(R.id.buttonConverter);
         b.setOnClickListener(new View.OnClickListener() {
             public void onClick(View View) {
                 if (from == to) {
