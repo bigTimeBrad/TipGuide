@@ -26,6 +26,7 @@
         <item >Singapore Dollar</item>
     </string-array>
     <string-array name="name2">
+        <item >-------</item>
         <item >Morocco</item>
         <item >Israel</item>
         <item >Costa Rica</item>
