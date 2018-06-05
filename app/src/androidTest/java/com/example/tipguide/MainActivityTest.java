@@ -8,6 +8,7 @@ import org.junit.runner.RunWith;
 import android.support.test.espresso.Espresso;
 import android.support.test.espresso.UiController;
 import android.support.test.espresso.ViewAction;
+import android.support.test.espresso.action.ViewActions;
 import android.support.test.espresso.matcher.ViewMatchers;
 import android.support.test.runner.AndroidJUnit4;
 
@@ -98,6 +99,7 @@ public class MainActivityTest {
         //split
         onView(withId(R.id.seekBar_one)).perform(setProgress(1));
         Espresso.closeSoftKeyboard();
+
 
         onView(withId(R.id.calculate_tips)).perform(click());
 

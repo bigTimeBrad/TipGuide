@@ -1,24 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="match_parent"-->
-    <!--android:orientation="vertical"-->
-    <!--android:padding="@dimen/md_keylines">-->
-
-<!--</LinearLayout>-->
 
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
 android:layout_width="match_parent"
-android:layout_height="match_parent"
->
+android:layout_height="match_parent">
 
     <ScrollView
         android:id="@+id/scroll_content"
         android:layout_width="match_parent"
-        android:layout_height="538dp"
-
+        android:layout_height="wrap_content"
         android:layout_above="@+id/calculate_tips"
-        android:layout_marginBottom="80dp"
+        android:layout_marginBottom="0dp"
         android:background="#ffffff"
         android:padding="16dp"
         android:scrollbars="none">
@@ -32,7 +23,6 @@ android:layout_height="match_parent"
                 android:id="@+id/first_binary"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-
                 android:layout_alignParentTop="true"
                 android:layout_marginTop="8dp"
                 android:text="@string/total_bill"
