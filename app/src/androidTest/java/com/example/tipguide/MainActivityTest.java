@@ -119,19 +119,19 @@ public class MainActivityTest {
 
     @Test
     public void calculatorTest(){
+
         Matcher<View> matcher = allOf(withText("CALCULATOR"),
                 isDescendantOfA(withId(R.id.tabs)));
         onView(matcher).perform(click());
         SystemClock.sleep(1800);
 
         //totalBill
-        onView(withId(R.id.bill_value)).perform(typeText("100.00"));
+        onView(withId(R.id.bill_value)).perform(typeText("100"));
 
-        //tip percentonView(withId(R.id.calculate_tips)).perform(click());
         onView(withId(R.id.seekBar)).perform(setProgress(20));
         Espresso.closeSoftKeyboard();
 
-        //split
+
         onView(withId(R.id.seekBar_one)).perform(setProgress(1));
         Espresso.closeSoftKeyboard();
 
