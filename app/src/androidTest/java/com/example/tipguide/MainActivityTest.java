@@ -88,16 +88,20 @@ public class MainActivityTest {
         SystemClock.sleep(1800);
 
         onView(withId(R.id.spinnerOut)).perform(click());
-        onData(anything()).atPosition(4).perform(click());
+        onData(anything()).atPosition(2).perform(click());
         SystemClock.sleep(1800);
 
+
         onView(withId(R.id.buttonConverter)).perform(click());
+
+        SystemClock.sleep(1800);
+
+        onView(withId(R.id.textViewResult)).check(matches(withText("0.85 EUR")));
 
     }
 
 
 
-//    WORKS
     @Test
     public void calculatorToastTest(){
 
@@ -117,6 +121,22 @@ public class MainActivityTest {
 
     }
 
+
+    @Test
+    public void calculatorToastTest2(){
+
+        Matcher<View> matcher = allOf(withText("CALCULATOR"),
+                isDescendantOfA(withId(R.id.tabs)));
+        onView(matcher).perform(click());
+        SystemClock.sleep(1800);
+
+        onView(withId(R.id.calculate_tips)).perform(click());
+        onView(withText("All Input field must be filled")).inRoot(withDecorView(not(is(mActivityRule.getActivity().getWindow().getDecorView())))).check(matches(isDisplayed()));
+        SystemClock.sleep(1800);
+
+    }
+
+
     @Test
     public void calculatorTest(){
 
@@ -126,14 +146,16 @@ public class MainActivityTest {
         SystemClock.sleep(1800);
 
         //totalBill
-        onView(withId(R.id.bill_value)).perform(typeText("100"));
+        onView(withId(R.id.bill_value)).perform(typeText("100.00"));
 
         onView(withId(R.id.seekBar)).perform(setProgress(20));
         Espresso.closeSoftKeyboard();
+        onView(withId(R.id.tip_percent)).check(matches(withText("Tip Percent - 20")));
 
 
         onView(withId(R.id.seekBar_one)).perform(setProgress(1));
         Espresso.closeSoftKeyboard();
+        onView(withId(R.id.tip_percent)).check(matches(withText("Split Number - 1")));
 
         SystemClock.sleep(1800);
         //Click Button and check the values
