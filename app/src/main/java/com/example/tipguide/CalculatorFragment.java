@@ -52,7 +52,9 @@ public class CalculatorFragment extends Fragment {
         tipPercent.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                tipPercentLabel.setText("Tip Percent - " + seekBar.getProgress());
                 tipPercentValue = progress;
+
             }
             @Override
             public void onStartTrackingTouch(SeekBar seekBar) {
@@ -66,6 +68,7 @@ public class CalculatorFragment extends Fragment {
         tipsNumberOfPeople.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                splitNumberLabel.setText("Split Number - " + seekBar.getProgress());
                 tipsForNumberOfPeople = progress;
             }
             @Override
