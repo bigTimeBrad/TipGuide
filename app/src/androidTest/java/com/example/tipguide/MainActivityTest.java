@@ -155,7 +155,7 @@ public class MainActivityTest {
 
         onView(withId(R.id.seekBar_one)).perform(setProgress(1));
         Espresso.closeSoftKeyboard();
-        onView(withId(R.id.tip_percent)).check(matches(withText("Split Number - 1")));
+        onView(withId(R.id.split_number)).check(matches(withText("Split Number - 1")));
 
         SystemClock.sleep(1800);
         //Click Button and check the values
