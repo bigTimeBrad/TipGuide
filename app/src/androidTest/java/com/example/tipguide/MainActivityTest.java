@@ -92,7 +92,7 @@ public class MainActivityTest {
         SystemClock.sleep(1800);
 
         onView(withId(R.id.buttonConverter)).perform(click());
-        
+
     }
 
 
@@ -100,22 +100,28 @@ public class MainActivityTest {
 //    WORKS
     @Test
     public void calculatorToastTest(){
-        onView(withId(R.id.viewpager)).perform(swipeLeft());
-        onView(withId(R.id.viewpager)).perform(swipeLeft());
+
+        Matcher<View> matcher = allOf(withText("CALCULATOR"),
+                isDescendantOfA(withId(R.id.tabs)));
+        onView(matcher).perform(click());
+        SystemClock.sleep(1800);
+
 
         onView(withId(R.id.bill_value)).perform(typeText("100"));
         Espresso.closeSoftKeyboard();
 
         onView(withId(R.id.calculate_tips)).perform(click());
         onView(withText("Set values for Tip percent and split number")).inRoot(withDecorView(not(is(mActivityRule.getActivity().getWindow().getDecorView())))).check(matches(isDisplayed()));
-
+        SystemClock.sleep(1800);
 
     }
 
     @Test
     public void calculatorTest(){
-        onView(withId(R.id.viewpager)).perform(swipeLeft());
-        onView(withId(R.id.viewpager)).perform(swipeLeft());
+        Matcher<View> matcher = allOf(withText("CALCULATOR"),
+                isDescendantOfA(withId(R.id.tabs)));
+        onView(matcher).perform(click());
+        SystemClock.sleep(1800);
 
         //totalBill
         onView(withId(R.id.bill_value)).perform(typeText("100.00"));
