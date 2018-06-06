@@ -110,6 +110,7 @@ public class MainActivityTest {
         onView(withId(R.id.bill_value)).perform(typeText("100"));
         Espresso.closeSoftKeyboard();
 
+        SystemClock.sleep(1800);
         onView(withId(R.id.calculate_tips)).perform(click());
         onView(withText("Set values for Tip percent and split number")).inRoot(withDecorView(not(is(mActivityRule.getActivity().getWindow().getDecorView())))).check(matches(isDisplayed()));
         SystemClock.sleep(1800);
@@ -134,11 +135,13 @@ public class MainActivityTest {
         onView(withId(R.id.seekBar_one)).perform(setProgress(1));
         Espresso.closeSoftKeyboard();
 
+        SystemClock.sleep(1800);
         //Click Button and check the values
         onView(withId(R.id.calculate_tips)).perform(click());
         onView(withId(R.id.total_to_pay_result)).check(matches(withText("120")));
         onView(withId(R.id.total_tip_result)).check(matches(withText("20")));
         onView(withId(R.id.tip_per_person_result)).check(matches(withText("20")));
+        SystemClock.sleep(1800);
     }
 
     public static ViewAction setProgress(int progress) {
