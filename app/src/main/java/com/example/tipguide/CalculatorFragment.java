@@ -29,10 +29,6 @@ public class CalculatorFragment extends Fragment {
      TextView splitNumberLabel;
      TextView cardText;
 
-
-
-
-
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {

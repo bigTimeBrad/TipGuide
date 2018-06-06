@@ -138,25 +138,24 @@ public class HomeFragment extends Fragment {
         void onListFragmentInteraction(CountryModel item);
     }
 
-    public class spinOne implements AdapterView.OnItemSelectedListener {
-        int ide;
-        spinOne(int i)
-        {
-            ide =i;
-        }
-        public void onItemSelected(AdapterView<?> parent, View view,
-                                   int index, long id) {
-            if(ide == 1) {
-                countryIndex = index;
-            }
-
-        }
-
-        public void onNothingSelected(AdapterView<?> arg0) {
-            // TODO Auto-generated method stub
-        }
-
-    }
+//    public class spinOne implements AdapterView.OnItemSelectedListener {
+//        int ide;
+////        spinOne(int i)
+////        {
+////            ide =i;
+////        }
+//        public void onItemSelected(AdapterView<?> parent, View view, int index, long id) {
+//            if(ide == 1) {
+//                countryIndex = index;
+//            }
+//
+//        }
+//
+//        public void onNothingSelected(AdapterView<?> arg0) {
+//            // TODO Auto-generated method stub
+//        }
+//
+//    }
 
     @Override
     public void onDetach() {
