@@ -33,10 +33,10 @@ public class CountryModel implements Parcelable {
 
     @Override
     public void writeToParcel(Parcel dest, int flags) {
-        dest.writeString(hotelTip);
-        dest.writeString(name);
-        dest.writeString(restTip);
-        dest.writeString(taxiGuideTip);
+//        dest.writeString(hotelTip);
+//        dest.writeString(name);
+//        dest.writeString(restTip);
+//        dest.writeString(taxiGuideTip);
 
     }
 }

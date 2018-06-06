@@ -48,14 +48,14 @@ public class HomeFragment extends Fragment {
     public HomeFragment() {
     }
 
-    @SuppressWarnings("unused")
-    public static HomeFragment newInstance(int columnCount) {
-        HomeFragment fragment = new HomeFragment();
-        Bundle args = new Bundle();
-        args.putInt(ARG_COLUMN_COUNT, columnCount);
-        fragment.setArguments(args);
-        return fragment;
-    }
+//    @SuppressWarnings("unused")
+//    public static HomeFragment newInstance(int columnCount) {
+//        HomeFragment fragment = new HomeFragment();
+//        Bundle args = new Bundle();
+//        args.putInt(ARG_COLUMN_COUNT, columnCount);
+//        fragment.setArguments(args);
+//        return fragment;
+//    }
 
     @Override
     public void onAttach(Context context) {
@@ -73,10 +73,10 @@ public class HomeFragment extends Fragment {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mColumnCount = getArguments().getInt(ARG_COLUMN_COUNT);
-            mMatches = getArguments().getParcelableArrayList(ARG_DATA_SET);
-        }
+//        if (getArguments() != null) {
+////            mColumnCount = getArguments().getInt(ARG_COLUMN_COUNT);
+////            mMatches = getArguments().getParcelableArrayList(ARG_DATA_SET);
+////        }
         Log.i(TAG, "onCreate()");
     }
 
