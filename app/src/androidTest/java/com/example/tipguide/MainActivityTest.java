@@ -5,6 +5,7 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
+import android.os.SystemClock;
 import android.support.test.espresso.Espresso;
 import android.support.test.espresso.UiController;
 import android.support.test.espresso.ViewAction;
@@ -23,9 +24,11 @@ import static android.support.test.espresso.action.ViewActions.swipeLeft;
 import static android.support.test.espresso.action.ViewActions.typeText;
 import static android.support.test.espresso.assertion.ViewAssertions.matches;
 import static android.support.test.espresso.matcher.RootMatchers.withDecorView;
+import static android.support.test.espresso.matcher.ViewMatchers.isDescendantOfA;
 import static android.support.test.espresso.matcher.ViewMatchers.isDisplayed;
 import static android.support.test.espresso.matcher.ViewMatchers.withId;
 import static android.support.test.espresso.matcher.ViewMatchers.withText;
+import static org.hamcrest.Matchers.allOf;
 import static org.hamcrest.Matchers.anything;
 import static org.hamcrest.Matchers.containsString;
 import static org.hamcrest.Matchers.hasToString;
@@ -74,21 +77,22 @@ public class MainActivityTest {
     @Test
     public void converterPage(){
 
-        onView(withId(R.id.viewpager)).perform(swipeLeft());
+        Matcher<View> matcher = allOf(withText("CONVERTER"),
+                isDescendantOfA(withId(R.id.tabs)));
+        onView(matcher).perform(click());
+        SystemClock.sleep(1800);
 
-        onView(withId(R.id.spinnerIn)).perform(doubleClick());
 
+        onView(withId(R.id.spinnerIn)).perform(click());
         onData(anything()).atPosition(1).perform(click());
+        SystemClock.sleep(1800);
 
-//        onData(hasToString(startsWith("US Doll")))
-//                .perform(click());
+        onView(withId(R.id.spinnerOut)).perform(click());
+        onData(anything()).atPosition(4).perform(click());
+        SystemClock.sleep(1800);
 
-//        onView(withId(R.id.spinnerOut)).perform(doubleClick());
-//        onView(withText("US Dollar")).perform(click());
-
-//        Espresso.closeSoftKeyboard();
         onView(withId(R.id.buttonConverter)).perform(click());
-
+        
     }
 
 

@@ -12,6 +12,7 @@
         android:paddingTop="150dp"
         tools:context=".HomeFragment">
 
+
         <TextView
             android:id="@+id/welcome"
             android:layout_width="match_parent"
