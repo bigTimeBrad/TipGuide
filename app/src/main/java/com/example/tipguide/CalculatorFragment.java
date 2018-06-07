@@ -29,10 +29,6 @@ public class CalculatorFragment extends Fragment {
      TextView splitNumberLabel;
      TextView cardText;
 
-
-
-
-
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -54,6 +50,7 @@ public class CalculatorFragment extends Fragment {
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                 tipPercentLabel.setText("Tip Percent - " + seekBar.getProgress());
                 tipPercentValue = progress;
+
             }
             @Override
             public void onStartTrackingTouch(SeekBar seekBar) {
