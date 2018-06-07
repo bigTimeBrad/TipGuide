@@ -41,6 +41,40 @@
         <item >Egypt</item>
         <item >South Africa</item>
         <item >Italy</item>
+        <item >Dubai</item>
+        <item >Iran</item>
+        <item >Jordan</item>
+        <item >Qatar</item>
+        <item >Saudi Arabia</item>
+        <item >United Arab Emirates</item>
+        <item >Argentina</item>
+        <item >Chile</item>
+        <item >Colombia</item>
+        <item >Ecuador</item>
+        <item >Nicaragua</item>
+        <item >Peru</item>
+        <item >Caribbean</item>
+        <item >China</item>
+        <item >Cambodia</item>
+        <item >Indonesia</item>
+        <item >Philippines</item>
+        <item >Singapore</item>
+        <item >South Korea</item>
+        <item >Taiwan</item>
+        <item >Thailand</item>
+        <item >Vietnam</item>
+        <item >Croatia</item>
+        <item >Czech Republic</item>
+        <item >Estonia</item>
+        <item >Germany</item>
+        <item >Hungary</item>
+        <item >Iceland</item>
+        <item >Russia</item>
+        <item >Scandinavia</item>
+        <item >Spain</item>
+        <item >Switzerland</item>
+        <item >Turkey</item>
+        <item >United Kingdom</item>
     </string-array>
     <string-array name="value">
         <item >INR</item>

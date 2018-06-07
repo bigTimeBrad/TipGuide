@@ -25,7 +25,7 @@ public class ConverterFragment extends Fragment {
 
     public ConverterFragment() {
     }
-
+    TextView currencyTitleTextView;
     TextView conversionTextView;
     public int to;
     public int from;
@@ -39,6 +39,7 @@ public class ConverterFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.item_converter, container, false);
+        currencyTitleTextView = rootView.findViewById(R.id.currency_title);
         conversionTextView = rootView.findViewById(R.id.textViewResult);
         Spinner s1 = rootView.findViewById(R.id.spinnerIn);
         Spinner s2 = rootView.findViewById(R.id.spinnerOut);

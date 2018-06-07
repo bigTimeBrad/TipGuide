@@ -5,6 +5,7 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
+import android.os.SystemClock;
 import android.support.test.espresso.Espresso;
 import android.support.test.espresso.UiController;
 import android.support.test.espresso.ViewAction;
@@ -23,9 +24,11 @@ import static android.support.test.espresso.action.ViewActions.swipeLeft;
 import static android.support.test.espresso.action.ViewActions.typeText;
 import static android.support.test.espresso.assertion.ViewAssertions.matches;
 import static android.support.test.espresso.matcher.RootMatchers.withDecorView;
+import static android.support.test.espresso.matcher.ViewMatchers.isDescendantOfA;
 import static android.support.test.espresso.matcher.ViewMatchers.isDisplayed;
 import static android.support.test.espresso.matcher.ViewMatchers.withId;
 import static android.support.test.espresso.matcher.ViewMatchers.withText;
+import static org.hamcrest.Matchers.allOf;
 import static org.hamcrest.Matchers.anything;
 import static org.hamcrest.Matchers.containsString;
 import static org.hamcrest.Matchers.hasToString;
@@ -74,61 +77,95 @@ public class MainActivityTest {
     @Test
     public void converterPage(){
 
-        onView(withId(R.id.viewpager)).perform(swipeLeft());
+        Matcher<View> matcher = allOf(withText("CONVERTER"),
+                isDescendantOfA(withId(R.id.tabs)));
+        onView(matcher).perform(click());
+        SystemClock.sleep(1800);
 
-        onView(withId(R.id.spinnerIn)).perform(doubleClick());
 
+        onView(withId(R.id.spinnerIn)).perform(click());
         onData(anything()).atPosition(1).perform(click());
+        SystemClock.sleep(1800);
 
-//        onData(hasToString(startsWith("US Doll")))
-//                .perform(click());
+        onView(withId(R.id.spinnerOut)).perform(click());
+        onData(anything()).atPosition(2).perform(click());
+        SystemClock.sleep(1800);
 
-//        onView(withId(R.id.spinnerOut)).perform(doubleClick());
-//        onView(withText("US Dollar")).perform(click());
 
-//        Espresso.closeSoftKeyboard();
         onView(withId(R.id.buttonConverter)).perform(click());
+
+        SystemClock.sleep(1800);
+
+        onView(withId(R.id.textViewResult)).check(matches(withText("0.85 EUR")));
 
     }
 
 
 
-//    WORKS
     @Test
     public void calculatorToastTest(){
-        onView(withId(R.id.viewpager)).perform(swipeLeft());
-        onView(withId(R.id.viewpager)).perform(swipeLeft());
+
+        Matcher<View> matcher = allOf(withText("CALCULATOR"),
+                isDescendantOfA(withId(R.id.tabs)));
+        onView(matcher).perform(click());
+        SystemClock.sleep(1800);
+
 
         onView(withId(R.id.bill_value)).perform(typeText("100"));
         Espresso.closeSoftKeyboard();
 
+        SystemClock.sleep(1800);
         onView(withId(R.id.calculate_tips)).perform(click());
         onView(withText("Set values for Tip percent and split number")).inRoot(withDecorView(not(is(mActivityRule.getActivity().getWindow().getDecorView())))).check(matches(isDisplayed()));
-
+        SystemClock.sleep(1800);
 
     }
 
+
+    @Test
+    public void calculatorToastTest2(){
+
+        Matcher<View> matcher = allOf(withText("CALCULATOR"),
+                isDescendantOfA(withId(R.id.tabs)));
+        onView(matcher).perform(click());
+        SystemClock.sleep(1800);
+
+        onView(withId(R.id.calculate_tips)).perform(click());
+        onView(withText("All Input field must be filled")).inRoot(withDecorView(not(is(mActivityRule.getActivity().getWindow().getDecorView())))).check(matches(isDisplayed()));
+        SystemClock.sleep(1800);
+
+    }
+
+
     @Test
     public void calculatorTest(){
-        onView(withId(R.id.viewpager)).perform(swipeLeft());
-        onView(withId(R.id.viewpager)).perform(swipeLeft());
+
+        Matcher<View> matcher = allOf(withText("CALCULATOR"),
+                isDescendantOfA(withId(R.id.tabs)));
+        onView(matcher).perform(click());
+        SystemClock.sleep(1800);
 
         //totalBill
         onView(withId(R.id.bill_value)).perform(typeText("100.00"));
 
-        //tip percentonView(withId(R.id.calculate_tips)).perform(click());
         onView(withId(R.id.seekBar)).perform(setProgress(20));
         Espresso.closeSoftKeyboard();
 
-        //split
+
+
         onView(withId(R.id.seekBar_one)).perform(setProgress(1));
         Espresso.closeSoftKeyboard();
 
+
+        SystemClock.sleep(1800);
         //Click Button and check the values
         onView(withId(R.id.calculate_tips)).perform(click());
         onView(withId(R.id.total_to_pay_result)).check(matches(withText("120")));
         onView(withId(R.id.total_tip_result)).check(matches(withText("20")));
         onView(withId(R.id.tip_per_person_result)).check(matches(withText("20")));
+        onView(withId(R.id.tip_percent)).check(matches(withText("Tip Percent - 20")));
+        onView(withId(R.id.split_number)).check(matches(withText("Split Number - 1")));
+        SystemClock.sleep(1800);
     }
 
     public static ViewAction setProgress(int progress) {

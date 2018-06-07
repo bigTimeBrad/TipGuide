@@ -121,9 +121,9 @@ public class HomeFragment extends Fragment {
                         if (model.name.equals(country)) {
                             chosenCountry = model;
                             textView1.setText("Country: \n" + chosenCountry.name + "\n");
-                            textView2.setText("Restaurant tip: \n" + chosenCountry.restTip + "\n");
-                            textView3.setText("Taxi Ride tip: \n" + chosenCountry.taxiGuideTip + "\n");
-                            textView4.setText("Hotel tip : \n" + chosenCountry.hotelTip + "\n");
+                            textView2.setText("Restaurant tipping info: \n" + chosenCountry.restTip + "\n");
+                            textView3.setText("Taxi Driver/Tour Guide tipping info: \n" + chosenCountry.taxiGuideTip + "\n");
+                            textView4.setText("Hotel tipping info : \n" + chosenCountry.hotelTip + "\n");
                         }
                     }
                 }

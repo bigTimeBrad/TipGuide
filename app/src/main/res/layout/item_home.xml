@@ -12,13 +12,21 @@
         android:paddingTop="150dp"
         tools:context=".HomeFragment">
 
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingBottom="20dp"
+            android:src="@drawable/tip2"/>
+
         <TextView
             android:id="@+id/welcome"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:paddingBottom="10dp"
-            android:text="INTERNATIONAL TIPPING GUIDE"
+            android:paddingBottom="50dp"
+            android:textSize="30dp"
+            android:text="International Tipping Guide"
             android:textAppearance="?android:attr/textAppearanceLarge" />
 
         <TextView
@@ -26,7 +34,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="Select a country"
+            android:text="Select a Country"
             android:textAppearance="?android:attr/textAppearanceMedium" />
 
         <Spinner

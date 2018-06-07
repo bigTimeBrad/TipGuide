@@ -12,6 +12,16 @@
         android:layout_height="wrap_content"
         android:contentDescription="Currency conversion picture"
         android:src="@drawable/currency" />
+
+    <TextView
+        android:id="@+id/currency_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingBottom="50dp"
+        android:textSize="30dp"
+        android:text="Currency Converter"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
     
     <TextView
         android:id="@+id/textView1"
