@@ -6,3 +6,6 @@ AD 340 - Android Development, Group Project
 
 
 [![CircleCI](https://circleci.com/gh/bigTimeBrad/TipGuide.svg?style=svg)](https://circleci.com/gh/bigTimeBrad/TipGuide)
+
+#Check it out on the Google Play Store!
+https://play.google.com/store/apps/details?id=internationaltippingapp.groupproj.tipguide
