@@ -6,5 +6,5 @@
 
 [![CircleCI](https://circleci.com/gh/bigTimeBrad/TipGuide.svg?style=svg)](https://circleci.com/gh/bigTimeBrad/TipGuide)
 
-###Google Play Store Link!
+### Google Play Store Link!
 https://play.google.com/store/apps/details?id=internationaltippingapp.groupproj.tipguide
